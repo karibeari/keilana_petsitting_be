@@ -45,3 +45,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "carrierwave", "~> 1.3"
+
+gem "active_model_serializers", "~> 0.10.9"
