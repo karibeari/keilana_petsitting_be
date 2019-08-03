@@ -3,11 +3,11 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all
-    render json: @events 
+    render json: @events
   end
 
   def create
-    @event = Event.create(event_params)
+    @event = Event.create(event_params, confirmed:false)
     render json: @event
   end
 
@@ -28,7 +28,7 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.permit(:start, :end, :human_name, :pet_name)
+    params.permit(:start, :end, :human_name, :pet_name, :pet_type, :email, :phone)
   end
 
   def find_event
